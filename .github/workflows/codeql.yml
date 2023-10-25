@@ -83,7 +83,7 @@ jobs:
         
     - name: package war file
       run: mvn package -DskipTests
-      working-directory: ./code/
+      working-directory: ./
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
