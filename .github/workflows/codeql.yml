@@ -82,7 +82,7 @@ jobs:
         java-version: 17
         
     - name: package war file
-      run: mvn package -DskipTests
+      run: mvn clean package -DskipTests
       working-directory: ./
 
     - name: Perform CodeQL Analysis
