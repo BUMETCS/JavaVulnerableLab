@@ -17,8 +17,8 @@ on:
   pull_request:
     # The branches below must be a subset of the branches above
     branches: [ "master" ]
-    schedule:
-     - cron: '40 19 * * 0'
+    # schedule:
+    #  - cron: '40 19 * * 0'
 
 jobs:
   analyze:
@@ -81,8 +81,8 @@ jobs:
       with:
         java-version: 17
         
-    - name: package war file
-      run: mvn clean package -DskipTests
+    - name: build with maven
+      run: mvn clean package 
       working-directory: ./
 
     - name: Perform CodeQL Analysis
